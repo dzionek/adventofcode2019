@@ -16,10 +16,14 @@ def countFuelSecond(mass, fuel):
         return countFuelSecond(step, fuel)
 
 file = open("input.txt","r")
+lines = file.readlines()
 
-for row in file:
-    mass = int(row.strip('\n'))
+for line in lines:
+    mass = int(line)
     total_fuel_first += countFuel(mass)
     total_fuel_second += countFuelSecond(mass, 0)
     
 file.close()
+
+print(total_fuel_first)
+print(total_fuel_second)

@@ -2,7 +2,7 @@ file = open("input.txt","r")
 line = file.readline()
 
 input = list(map(int, line.split(',')))
-blanc = list(input)
+blank = list(input)
 
 i = 0
 while input[i] != 99:
@@ -17,7 +17,7 @@ print(input[0])
 
 for noun in range (100):
     for verb in range (100):
-            input = list(blanc)
+            input = list(blank)
             i = 0
             input[1] = noun
             input [2] = verb            
