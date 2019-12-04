@@ -35,18 +35,11 @@ def checkPassword(password,question):
                     duplicates.add((n,occurrences))
     return True
 
-password = [0,0,0,0,0,0]
 n_one = 0
 n_two = 0
 
 for i in range (206938,679129):
-    password[0] = i // 100000
-    password[1] = (i-100000*password[0]) // 10000
-    password[2] =  (i-100000*password[0]-10000*password[1]) // 1000
-    password[3] = (i-100000*password[0]-10000*password[1] - 1000*password[2]) // 100
-    password[4] = (i-100000*password[0]-10000*password[1] - 1000*password[2] - 100*password[3]) // 10
-    password[5] = (i-100000*password[0]-10000*password[1] - 1000*password[2] - 100*password[3] - 10*password[4])
-    
+    password = list(map(int,str(i)))
     if checkPassword(password,1):
         n_one += 1
     if checkPassword(password,2):
