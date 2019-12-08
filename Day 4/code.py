@@ -1,4 +1,4 @@
-def findDuplicates(password):
+def find_duplicates(password):
     duplicates = set()
     for i in range (5):
         if password[i] == password[i+1]:
@@ -14,18 +14,19 @@ def findDuplicates(password):
                 duplicates.add((password[i],2))
     return duplicates
 
-def checkPassword(password,question):
+
+def check_password(password,question):
     for i in range(5):
         if not (password[i] <= password[i+1]):
             return False
-    duplicates = findDuplicates(password)
+    duplicates = find_duplicates(password)
     if len(duplicates) == 0:
         return False
     
     if question == 2:
         for (n,occurrences) in duplicates:
             if occurrences >2:
-                if len(duplicates)==1:
+                if len(duplicates) == 1:
                     return False
                 else:
                     duplicates.remove((n,occurrences))
@@ -35,14 +36,16 @@ def checkPassword(password,question):
                     duplicates.add((n,occurrences))
     return True
 
+
 n_one = 0
 n_two = 0
 
 for i in range (206938,679129):
     password = list(map(int,str(i)))
-    if checkPassword(password,1):
+    if check_password(password,1):
         n_one += 1
-    if checkPassword(password,2):
+    if check_password(password,2):
         n_two += 1
+
 print(n_one)
 print(n_two)

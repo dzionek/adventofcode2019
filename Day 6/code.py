@@ -6,7 +6,6 @@ file.close()
 
 G=nx.DiGraph()
 
-start_mass = lines[0][0:3]
 for line in lines:
     mass = line[0:3]
     orbit = line[4:7]
@@ -17,5 +16,5 @@ for line in lines:
 paths_graph = nx.transitive_closure(G)
 print(paths_graph.size())
 
-G_undirect = G.to_undirected()
-print(nx.shortest_path_length(G_undirect,source='SAN',target='YOU')-2)
+G_undirected = G.to_undirected()
+print(nx.shortest_path_length(G_undirected,source='SAN',target='YOU')-2)
