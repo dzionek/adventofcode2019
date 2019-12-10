@@ -1,4 +1,4 @@
-file = open("input.txt", "r")
+file = open("inputs/05.txt", "r")
 line = file.readline()
 file.close()
 
@@ -85,4 +85,4 @@ def run_computer(list_of_inputs):
     return output
 
 
-print(run_computer((1, 5)))
+print(run_computer((1, 5))[-2:])

@@ -1,6 +1,6 @@
 import math
 
-file = open("input.txt","r")
+file = open("inputs/10.txt","r")
 lines = [line.strip('\n') for line in file.readlines()]
 file.close()
 

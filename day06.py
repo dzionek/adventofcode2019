@@ -1,6 +1,6 @@
 import networkx as nx
 
-file = open("input.txt","r")
+file = open("inputs/06.txt","r")
 lines = file.readlines()
 file.close()
 

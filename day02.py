@@ -1,4 +1,4 @@
-file = open("input.txt","r")
+file = open("inputs/02.txt","r")
 line = file.readline()
 file.close()
 

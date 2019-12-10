@@ -15,7 +15,7 @@ def count_fuel_second(mass, fuel):
         return count_fuel_second(step, fuel)
 
 
-file = open("input.txt", "r")
+file = open("inputs/01.txt", "r")
 lines = file.readlines()
 file.close()
 

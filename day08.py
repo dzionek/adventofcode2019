@@ -1,4 +1,4 @@
-file = open("input.txt","r")
+file = open("inputs/08.txt","r")
 line = file.readline()
 file.close()
 line = line.strip('\n')
